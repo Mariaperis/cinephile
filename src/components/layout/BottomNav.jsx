@@ -13,25 +13,25 @@ function BottomNav() {
     {
       path: "/homepage",
       icon: <FiHome />,
-      label: "Inicio",
+      label: "Home",
     },
 
     {
       path: "/explore",
       icon: <FiCompass />,
-      label: "Explorar",
+      label: "Explorer",
     },
 
     {
       path: "/favorites",
       icon: <FiHeart />,
-      label: "Favoritos",
+      label: "Favorites",
     },
 
     {
       path: "/profile",
       icon: <FiUser />,
-      label: "Perfil",
+      label: "Profile",
     },
   ];
 
