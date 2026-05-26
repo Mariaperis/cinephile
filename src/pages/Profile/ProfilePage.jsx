@@ -13,13 +13,14 @@ import RecentActivitySection from "../../components/profile/RecentActivitySectio
 import AchievementsSection from "../../components/profile/AchievementsSection";
 
 import WatchlistSection from "../../components/profile/WatchlistSection";
+import profile from "../../assets/images/maria.jpg";
 
 function ProfilePage() {
 
   // MOCK USER
   const user = {
-    username: "Alex Mercer",
-    avatar: "/users/alex.jpg",
+    username: "Maria Peris",
+    avatar: profile,
     bio: "Film Collector • Sci-Fi Enthusiast",
   };
 
