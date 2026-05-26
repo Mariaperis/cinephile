@@ -1,25 +1,25 @@
 import { useNavigate } from "react-router-dom";
 
-function ActorCard({ actor }) {
+function FilmographyCard({
+  movie,
+}) {
 
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate(`/actor/${actor.id}`);
+    navigate(`/movie/${movie.id}`);
   };
 
   return (
     <article
       onClick={handleClick}
       className="
-        flex-shrink-0
-        w-[140px]
         cursor-pointer
         group
       "
     >
 
-      {/* IMAGE */}
+      {/* POSTER */}
       <div
         className="
           overflow-hidden
@@ -30,11 +30,11 @@ function ActorCard({ actor }) {
       >
 
         <img
-          src={actor.image}
-          alt={actor.name}
+          src={movie.image}
+          alt={movie.title}
           className="
             w-full
-            h-[180px]
+            h-[240px]
             object-cover
             transition-transform
             duration-500
@@ -45,28 +45,49 @@ function ActorCard({ actor }) {
       </div>
 
       {/* INFO */}
-      <div className="mt-3">
+      <div className="mt-4">
 
+        {/* TITLE */}
         <h3
           className="
             text-white
-            font-medium
+            text-xl
+            font-semibold
             group-hover:text-lime-400
             transition-colors
           "
         >
-          {actor.name}
+          {movie.title}
         </h3>
 
+        {/* META */}
         <p
           className="
             text-zinc-500
             text-sm
-            mt-1
+            mt-2
           "
         >
-          {actor.character}
+          {movie.year} • {movie.genre}
         </p>
+
+        {/* RATING */}
+        <div
+          className="
+            mt-3
+            inline-flex
+            items-center
+            gap-2
+            bg-zinc-900
+            px-3
+            py-1
+            rounded-full
+            text-yellow-400
+            text-sm
+          "
+        >
+          ⭐ {movie.rating}
+        </div>
 
       </div>
 
@@ -74,4 +95,4 @@ function ActorCard({ actor }) {
   );
 }
 
-export default ActorCard;
+export default FilmographyCard;

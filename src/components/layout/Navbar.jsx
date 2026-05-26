@@ -17,8 +17,7 @@ function Navbar() {
       <div className="flex items-center gap-4">
 
         {/* LOGO */}
-        <Link
-          to="/"
+        <div
           className="
             flex
             flex-col
@@ -47,7 +46,7 @@ function Navbar() {
           >
             CINEPHILE
           </h1>
-        </Link>
+        </div>
       </div>
 
       {/* RIGHT SECTION */}
