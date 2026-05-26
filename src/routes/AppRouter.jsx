@@ -6,6 +6,7 @@ import MovieDetailsPage from "../pages/MovieDetails/MovieDetailsPage";
 import ActorDetailsPage from "../pages/ActorDetails/ActorDetailsPage";
 import FavoritesPage from "../pages/Favorites/FavoritesPage";
 import LoginPage from "../pages/Auth/LoginPage";
+import ProfilePage from "../pages/Profile/ProfilePage";
 
 function AppRouter() {
   return (
@@ -17,6 +18,7 @@ function AppRouter() {
         <Route path="/movie/:id" element={<MovieDetailsPage />} />
         <Route path="/actor/:id" element={<ActorDetailsPage />} />
         <Route path="/favorites" element={<FavoritesPage />} />
+        <Route path="/profile" element={<ProfilePage />} />
         <Route path="/login" element={<LoginPage />} />
       </Routes>
     </BrowserRouter>
