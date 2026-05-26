@@ -8,6 +8,7 @@ import PageContainer from "../../components/layout/PageContainer";
 import MovieHero from "../../components/movie/MovieHero";
 import CastSection from "../../components/movie/CastSection";
 import RelatedMoviesSection from "../../components/movie/RelatedMoviesSection";
+import TrailerModal from "../../components/movie/TrailerModal";
 
 function MovieDetailsPage() {
   // URL PARAM
