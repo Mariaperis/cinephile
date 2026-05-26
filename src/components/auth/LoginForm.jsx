@@ -43,7 +43,7 @@ function LoginForm() {
       );
 
       // REDIRECT
-      navigate("/explore");
+      navigate("/homepage");
 
     } catch (err) {
 

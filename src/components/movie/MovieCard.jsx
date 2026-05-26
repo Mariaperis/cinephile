@@ -1,16 +1,34 @@
+import { useNavigate } from "react-router-dom";
+
 function MovieCard({ movie }) {
+
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate(`/movie/${movie.id}`);
+  };
+
   return (
-    <article>
+    <article
+      onClick={handleClick}
+      className="
+        cursor-pointer
+        group
+      "
+    >
 
       {/* POSTER */}
       <div
         className="
           aspect-[2/3]
           overflow-hidden
-          rounded-xl
+          rounded-2xl
           bg-zinc-900
+          border
+          border-zinc-800
         "
       >
+
         <img
           src={movie.image}
           alt={movie.title}
@@ -18,18 +36,22 @@ function MovieCard({ movie }) {
             w-full
             h-full
             object-cover
+            transition-transform
+            duration-500
+            group-hover:scale-105
           "
         />
+
       </div>
 
       {/* INFO */}
-      <div className="mt-3">
+      <div className="mt-4">
 
         <h3
           className="
             text-white
             text-sm
-            font-medium
+            font-semibold
           "
         >
           {movie.title}
@@ -45,12 +67,15 @@ function MovieCard({ movie }) {
             text-zinc-400
           "
         >
+
           <span>{movie.genre}</span>
 
           <span>•</span>
 
           <span>⭐ {movie.rating}</span>
+
         </div>
+
       </div>
 
     </article>
