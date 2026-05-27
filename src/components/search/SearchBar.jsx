@@ -1,9 +1,8 @@
 import { FiSearch } from "react-icons/fi";
 
-function SearchBar() {
+function SearchBar({ value, onChange }) {
   return (
     <div className="relative">
-
       <FiSearch
         className="
           absolute
@@ -18,6 +17,8 @@ function SearchBar() {
       <input
         type="text"
         placeholder="Search movies, actors..."
+        value={value}
+        onChange={(e) => onChange(e.target.value)}
         className="
           w-full
           h-14

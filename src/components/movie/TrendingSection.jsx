@@ -1,42 +1,84 @@
-import MovieCarousel from "./MovieCarousel";
+import MovieGrid from "./MovieGrid";
 
-function TrendingSection() {
+import Loader from "../ui/Loader";
+
+import ErrorState from "../ui/ErrorState";
+
+import EmptyState from "../ui/EmptyState";
+
+function TrendingSection({
+  movies,
+  loading = false,
+  error = null,
+  searchQuery,
+  selectedGenre,
+  lastMovieElementRef,
+}) {
+  // LOADING
+  if (loading) {
+    return <Loader />;
+  }
+
+  // ERROR
+  if (error) {
+    return <ErrorState message={error}  onRetry={() => window.location.reload()} />;
+  }
+
+  // EMPTY STATE
+  if (!movies.length) {
+    return (
+      <EmptyState
+        title="No movies found"
+        description="
+          Try adjusting your search or filters.
+        "
+      />
+    );
+  }
+
   return (
-    <div>
-
+    <section>
       {/* HEADER */}
       <div
         className="
           flex
           items-center
           justify-between
-          mb-5
+          mb-6
         "
       >
-        <h2
-          className="
-            text-white
-            text-3xl
-            font-bold
-          "
-        >
-          Trending Now
-        </h2>
+        <div>
+          <span
+            className="
+              text-lime-400
+              uppercase
+              tracking-[0.3em]
+              text-xs
+            "
+          >
+            Discover
+          </span>
 
-        <button
-          className="
-            text-lime-400
-            text-xs
-            font-medium
-            uppercase
-          "
-        >
-          View All
-        </button>
+          <h2
+            className="
+              text-white
+              text-4xl
+              font-bold
+              mt-3
+            "
+          >
+            Trending Movies
+          </h2>
+        </div>
       </div>
 
-      <MovieCarousel />
-    </div>
+      {/* MOVIE GRID */}
+      <MovieGrid 
+      movies={movies} 
+      lastMovieElementRef={lastMovieElementRef} 
+      />
+
+    </section>
   );
 }
 
