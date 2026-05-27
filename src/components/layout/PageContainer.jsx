@@ -6,7 +6,7 @@ function PageContainer({ children }) {
         min-h-screen
         bg-[#050505]
         text-white
-        overflow-hidden
+        overflow-x-hidden
       "
     >
       {/* GLOBAL CINEMATIC BACKGROUND */}
@@ -38,15 +38,16 @@ function PageContainer({ children }) {
       {/* PAGE CONTENT */}
       <div
         className="
-          relative
-          z-10
-          w-full
-          max-w-screen-xl
-          mx-auto
-          px-4
-          md:px-6
-          lg:px-8
-        "
+        relative
+        z-10
+        w-full
+        max-w-[1400px]
+        mx-auto
+        px-4
+        md:px-6
+        lg:px-8
+        xl:px-12
+       "
       >
         {children}
       </div>

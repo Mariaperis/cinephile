@@ -53,25 +53,6 @@ function Navbar() {
       <div className="flex items-center gap-3">
         
         {/* SEARCH BUTTON */}
-        <button
-          className="
-            w-11
-            h-11
-            flex
-            items-center
-            justify-center
-            rounded-full
-            bg-[#111111]
-            border
-            border-zinc-800
-            text-white
-            hover:border-lime-400/50
-            transition-all
-            duration-300
-          "
-        >
-          <FiSearch className="text-lg" />
-        </button>
 
         {/* NOTIFICATIONS BUTTON */}
         <button
