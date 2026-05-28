@@ -13,14 +13,14 @@ import CategoryCard from "./CategoryCard";
 const categories = [
   {
     id: 1,
-    title: "Géneros",
+    title: "Genres",
     icon: <FiFilm />,
     route: "/genres",
   },
 
   {
     id: 2,
-    title: "Año",
+    title: "Years",
     icon: <FiCalendar />,
     route: "/years",
   },
@@ -34,7 +34,7 @@ const categories = [
 
   {
     id: 4,
-    title: "Premios",
+    title: "Awards",
     icon: <FiAward />,
     route: "/awards",
   },
@@ -48,7 +48,7 @@ const categories = [
 
   {
     id: 6,
-    title: "Directores",
+    title: "Directors",
     icon: <FiUser />,
     route: "/directors",
   },
@@ -68,7 +68,7 @@ function CategoriesSection() {
             font-bold
           "
         >
-          Categorías
+          Categories
         </h2>
 
       </div>

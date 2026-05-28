@@ -42,7 +42,7 @@ function SuggestedSection() {
             font-bold
           "
         >
-          Sugerencias para ti
+          Suggestions for you
         </h2>
 
         <button
@@ -53,7 +53,7 @@ function SuggestedSection() {
             transition-colors
           "
         >
-          Ver todo
+          View all
         </button>
 
       </div>
