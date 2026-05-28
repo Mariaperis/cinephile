@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+:root {
+  --background: #050505;
+  --surface: #111111;
+  --card: #1a1a1a;
+  --primary: #B6FF3B;
+  --text: #ffffff;
+  --muted: #9ca3af;
+}
