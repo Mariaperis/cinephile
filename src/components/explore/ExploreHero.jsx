@@ -91,7 +91,7 @@ function ExploreHero({
               mt-4
             "
           >
-            Explorar
+            Explorer
           </h1>
 
           <p
@@ -102,7 +102,7 @@ function ExploreHero({
               leading-relaxed
             "
           >
-            Busca películas, actores y directores
+            Looking for actors and directors
           </p>
 
         </div>

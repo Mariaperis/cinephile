@@ -53,7 +53,7 @@ function RecentSearchesSection() {
             font-bold
           "
         >
-          Búsquedas recientes
+          Recent searches
         </h2>
 
         <button
@@ -64,7 +64,6 @@ function RecentSearchesSection() {
             transition-colors
           "
         >
-          Limpiar
         </button>
       </div>
 
