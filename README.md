@@ -174,12 +174,6 @@ This avoids exposing raw TMDB structures directly to the UI.
 
 ---
 
-# 📸 Screenshots
-
-Add your screenshots here.
-
----
-
 # 🔮 Future Improvements
 
 * Authentication
@@ -195,7 +189,7 @@ Add your screenshots here.
 
 # 👨‍💻 Author
 
-Developed by Daniel Sanchez.
+Developed by Maria Peris.
 
 ---
 
