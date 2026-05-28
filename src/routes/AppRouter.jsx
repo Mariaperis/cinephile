@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 import HomePage from "../pages/Home/HomePage";
 import ExplorePage from "../pages/Explore/ExplorePage";
@@ -10,18 +10,16 @@ import ProfilePage from "../pages/Profile/ProfilePage";
 
 function AppRouter() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<LoginPage />} />
-        <Route path="/homepage" element={<HomePage />} />
-        <Route path="/explore" element={<ExplorePage />} />
-        <Route path="/movie/:id" element={<MovieDetailsPage />} />
-        <Route path="/actor/:id" element={<ActorDetailsPage />} />
-        <Route path="/favorites" element={<FavoritesPage />} />
-        <Route path="/profile" element={<ProfilePage />} />
-        <Route path="/login" element={<LoginPage />} />
-      </Routes>
-    </BrowserRouter>
+    <Routes>
+      <Route path="/" element={<LoginPage />} />
+      <Route path="/homepage" element={<HomePage />} />
+      <Route path="/explore" element={<ExplorePage />} />
+      <Route path="/movie/:id" element={<MovieDetailsPage />} />
+      <Route path="/actor/:id" element={<ActorDetailsPage />} />
+      <Route path="/favorites" element={<FavoritesPage />} />
+      <Route path="/profile" element={<ProfilePage />} />
+      <Route path="/login" element={<LoginPage />} />
+    </Routes>
   );
 }
 
