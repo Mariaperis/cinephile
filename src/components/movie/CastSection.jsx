@@ -1,25 +1,18 @@
 import CastCard from "./CastCard";
 
-const cast = [
-  {
-    id: 1,
-    actor: "Elias Thorne",
-    character: "Detective Jax",
-    image: "/actors/actor1.jpg",
-  },
+function CastSection({
+  cast = [],
+}) {
 
-  {
-    id: 2,
-    actor: "Sasha Grey",
-    character: "Elena Vox",
-    image: "/actors/actor2.jpg",
-  },
-];
+  // EMPTY STATE
+  if (!cast.length) {
+    return null;
+  }
 
-function CastSection() {
   return (
     <section>
 
+      {/* TITLE */}
       <h2
         className="
           text-white
@@ -31,15 +24,16 @@ function CastSection() {
         Cast
       </h2>
 
+      {/* CAST LIST */}
       <div
         className="
           flex
           gap-5
           overflow-x-auto
           scrollbar-hide
+          pb-2
         "
       >
-
         {cast.map((person) => (
 
           <CastCard
@@ -48,7 +42,6 @@ function CastSection() {
           />
 
         ))}
-
       </div>
 
     </section>

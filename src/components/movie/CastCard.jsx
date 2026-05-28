@@ -1,96 +1,64 @@
-import { useNavigate } from "react-router-dom";
+import actorPlaceholder from "../../assets/posters/actor-placeholder.png";
 
 function CastCard({ person }) {
-
-  const navigate = useNavigate();
-
-  // NAVIGATION
-  const handleClick = () => {
-    navigate(`/actor/${person.id}`);
-  };
+  const imageUrl = person.profile_path
+    ? `https://image.tmdb.org/t/p/w300${person.profile_path}`
+    : actorPlaceholder;
 
   return (
     <article
-      onClick={handleClick}
       className="
-        flex-shrink-0
-        w-[140px]
-        cursor-pointer
-        group
+        min-w-[120px]
       "
     >
-
       {/* IMAGE */}
       <div
         className="
-          relative
+          w-[120px]
+          h-[160px]
+          rounded-2xl
           overflow-hidden
-          rounded-[1.5rem]
           border
           border-zinc-800
-          bg-zinc-900
         "
       >
-
         <img
-          src={person.image}
-          alt={person.actor}
+          src={imageUrl}
+          alt={person.name}
+          loading="lazy"
+          onError={(e) => {
+            e.target.src = actorPlaceholder;
+          }}
           className="
-            w-full
-            h-[180px]
-            object-cover
-            transition-transform
-            duration-500
-            group-hover:scale-105
+          w-full
+          h-full
+          object-cover
           "
         />
-
-        {/* OVERLAY */}
-        <div
-          className="
-            absolute
-            inset-0
-            bg-gradient-to-t
-            from-black/70
-            via-transparent
-            to-transparent
-          "
-        />
-
       </div>
 
       {/* INFO */}
-      <div className="mt-4">
-
-        {/* ACTOR NAME */}
+      <div className="mt-3">
         <h3
           className="
             text-white
-            text-sm
             font-semibold
-            leading-tight
-            group-hover:text-lime-400
-            transition-colors
+            text-sm
           "
         >
-          {person.actor}
+          {person.name}
         </h3>
 
-        {/* CHARACTER */}
         <p
           className="
-            text-lime-400
+            text-zinc-500
             text-xs
-            uppercase
-            tracking-[0.15em]
-            mt-2
+            mt-1
           "
         >
           {person.character}
         </p>
-
       </div>
-
     </article>
   );
 }
