@@ -36,7 +36,8 @@
     "jsdom": "^29.1.1",
     "vite": "^8.0.12",
     "vitest": "^4.1.7"
-  }
+  },
+  "homepage": "https://mariaperis.github.io/cinephile/"
 
   
 }
