@@ -6,5 +6,7 @@ import App from "./App";
 import "./styles/globals.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
+  <HashRouter>
     <App />
+  </HashRouter>,
 );
